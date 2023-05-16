@@ -1,13 +1,120 @@
-.app-header {
-  min-height: 100vh;
-  display: flex;
+.app {
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: center; */
   font-family: "Exo 2";
-  font-size: 20px;
+  padding: 50px 20px;
+}
+
+.app-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.app-header {
+  font-size: 24px;
+  text-align: left;
+  font-weight: bold;
 }
 
 .app-header-name {
   font-family: "Roboto";
+}
+
+.project-list__title {
+  margin-bottom: 40px;
+}
+
+.project-list__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    height: 100vh;
+  }
+
+  .project-list__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.project-card {
+}
+
+.project-card__top {
+  background-color: black;
+  overflow: hidden;
+  border-radius: 12px;
+  height: 180px;
+}
+
+.project-card__top img {
+  max-width: 100%;
+  /* height: 200px; */
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-card__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px 0px;
+}
+
+.project-card__bottom h3 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 800;
+}
+
+.project-card__bottom span {
+  font-size: 12px;
+}
+
+.project-card__bottom__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.project-card__bottom__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.project-card__purchase-btn {
+  border: none;
+  outline: none;
+  padding: 6px 8px;
+  border-radius: 20px;
+  color: white;
+  transition: all 150ms ease-in-out;
+  width: 90px;
+}
+
+.project-card__purchase-btn__green {
+  background: lightgreen;
+}
+
+.project-card__purchase-btn__red {
+  background: lightcoral;
+}
+
+.project-card__purchase-btn__green:hover {
+  background: green;
+}
+
+.project-card__purchase-btn__red:hover {
+  background: red;
 }
