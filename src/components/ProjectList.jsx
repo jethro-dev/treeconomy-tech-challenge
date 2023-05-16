@@ -25,7 +25,7 @@ const ProjectList = () => {
       {/* Grid */}
       <div className="project-list__grid">
         {projects.map((project) => (
-          <Card project={project} />
+          <Card key={project.id} project={project} />
         ))}
       </div>
     </div>
